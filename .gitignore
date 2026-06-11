@@ -1,0 +1,17 @@
+# Bỏ qua các file 
+
+# Bỏ qua toàn bộ một thư mục
+wandb/
+experiments/
+exper
+tf_logs/
+save_dir/
+weights/
+result/
+experiments_10m/
+
+
+# Bỏ qua tất cả các file có đuôi mở rộng nhất định
+*.log
+*.zip
+*.pth
