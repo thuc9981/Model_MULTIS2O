@@ -44,14 +44,15 @@ Cấu trúc dữ liệu huấn luyện dạng ghép cặp:
 ```
 Data_SAR/
 ├── train/
-│   ├── A/   # Ảnh SAR
-│   └── B/   # Ảnh quang học (Ground Truth)
+│   ├── S1_SAR/   # Ảnh SAR
+│   └── S2_Optical/   # Ảnh quang học (Ground Truth)
 ├── val/
-│   ├── A/
-│   └── B/
-└── test/
-    ├── A/
-    └── B/   # Tùy chọn (đánh giá)
+│   ├── S1_SAR/
+│   └── S2_Optical/
+├── test/
+│   ├── S1_SAR/
+│   └── S2_Optical
+
 ```
 Cập nhật đường dẫn trong file cấu hình config
 Ví dụ :
@@ -99,18 +100,17 @@ với :
 | `model_255000.pth`      | Model cải tiến cân bằng tham số                         |
 
 ### Test - inference
-```
+With model Opera to HLS : /mnt/hdd1tb/SAR2Optical/Model_MultiS2O/inference_multisar_HLS.py (Cập nhật các đường dẫn trong file  )
 
-python inference_sar.py \
-    --cfg_path configs_path \
-    --ckpt_path weights/your_model.pth \
-    --input_dir /duong/dan/test/A \
-    --output_dir /duong/dan/ket_qua \
-    --gt_dir /duong/dan/test/B \
-    --batch_size 8 \
-    --gpu 0
+```
+python ./inference_multisar_HLS.py
+```
+With model S1 to S2 : /mnt/hdd1tb/SAR2Optical/Model_MultiS2O/inference_multisar_S2.py (Cập nhật các đường dẫn trong file  )
+```
+python ./inference_multisar_S2.py
 ```
 
 ### Chỉ số đánh giá 
 # Model-MultiS2O
 # Model-MultiS2O
+# Model_MULTIS2O
