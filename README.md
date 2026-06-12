@@ -112,6 +112,4 @@ python ./inference_multisar_S2.py
 
 ### Chỉ số đánh giá 
 # Model-MultiS2O
-# Model-MultiS2O
-# Model_MULTIS2O
-# Model_MULTIS2O
+
